@@ -1,15 +1,3 @@
-jadi nanti konsepnya adiwiyata
-di page home dikasi penjelasan tentang adiwiyata dll (pwngwnnya di kasi gambar header biar lucu tapi gatau lagi)
-di galleryy nanti pake foto foto adiwiyata
-di callender nanti ya bikin kek kalender aja udah
-nanti pake navbar yaaaaa
-bismillahiroohmanirrohim HEADSHOOT
-
-- install bootstrap
-- install jquery popper.js
-
-kenapa kok navbarnya gak muncul anjerrrr
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
