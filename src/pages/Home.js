@@ -20,25 +20,7 @@ class Home extends React.Component{
                             untuk Cita-cita pembangunan berkelanjutan. Adiwiyata adalah upaya membangun program atau wadah yang baik dan 
                             ideal untuk mendapatkan ilmu pengetahuan dan berbagai norma serta etika 
                             yang dapat menjadi dasar manusia menuju terciptanya kesejahteraan hidup 
-                            untuk Cita-cita pembangunan berkelanjutan. Adiwiyata adalah upaya membangun program atau wadah yang baik dan 
-                            ideal untuk mendapatkan ilmu pengetahuan dan berbagai norma serta etika 
-                            yang dapat menjadi dasar manusia menuju terciptanya kesejahteraan hidup 
-                            untuk Cita-cita pembangunan berkelanjutan. Adiwiyata adalah upaya membangun program atau wadah yang baik dan 
-                            ideal untuk mendapatkan ilmu pengetahuan dan berbagai norma serta etika 
-                            yang dapat menjadi dasar manusia menuju terciptanya kesejahteraan hidup 
-                            untuk Cita-cita pembangunan berkelanjutan. Adiwiyata adalah upaya membangun program atau wadah yang baik dan 
-                            ideal untuk mendapatkan ilmu pengetahuan dan berbagai norma serta etika 
-                            yang dapat menjadi dasar manusia menuju terciptanya kesejahteraan hidup 
-                            untuk Cita-cita pembangunan berkelanjutan. Adiwiyata adalah upaya membangun program atau wadah yang baik dan 
-                            ideal untuk mendapatkan ilmu pengetahuan dan berbagai norma serta etika 
-                            yang dapat menjadi dasar manusia menuju terciptanya kesejahteraan hidup 
-                            untuk Cita-cita pembangunan berkelanjutan. Adiwiyata adalah upaya membangun program atau wadah yang baik dan 
-                            ideal untuk mendapatkan ilmu pengetahuan dan berbagai norma serta etika 
-                            yang dapat menjadi dasar manusia menuju terciptanya kesejahteraan hidup 
-                            untuk Cita-cita pembangunan berkelanjutan. Adiwiyata adalah upaya membangun program atau wadah yang baik dan 
-                            ideal untuk mendapatkan ilmu pengetahuan dan berbagai norma serta etika 
-                            yang dapat menjadi dasar manusia menuju terciptanya kesejahteraan hidup 
-                            untuk Cita-cita pembangunan berkelanjutan.
+                            untuk Cita-cita pembangunan berkelanjutan. 
                         </p>
                     </Media>
                     
