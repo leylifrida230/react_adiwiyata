@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from "../components/Card"
+import CardProd from "../components/CardProd"
 import $, { event } from "jquery"
 import "bootstrap/dist/js/bootstrap.bundle"
 class Cart extends React.Component{
@@ -83,11 +83,70 @@ class Cart extends React.Component{
     }
 
     // keknya gabutuh searching deh
-    
+
     render(){
         return(
+            // tempat total harga
             <div className="container">
+                <div className="row">
+                    {this.state.filterProduk.map( (item, index) => (
+                        <CardProd
+                        nama={item.nama}
+                        harga={item.harga}
+                        jumlah={item.jumlah}
+                        gambar={item.gambar}
+                        onEdit={ () => this.Edit(item)}
+                        onDrop={ () => this.Drop(item)}
+                        />
+                    ))}
+                </div>
 
+                {/**button tambah data keknya ga penting deh tapi di kasi aja dulu */}
+                <button className="btn btn-success" onClick={() => this.Add()}>
+                    Tambah Produk
+                </button>
+
+                <div className="modal" id="modal_prod">
+                    <div className="modal-dialog">
+                        <div className="modal-content">
+                            <div className="modal-header">
+                                Form Produk 
+                            </div>
+
+                            <div className="modal-body">
+                                <form onSubmit={ev => this.Save(ev)}>
+                                    Nama Produk 
+                                    <input type="text" className="form-control mb-2"
+                                    value={this.state.nama}
+                                    onChange={ev => this.setState({nama: ev.target.value})}
+                                    required />
+
+                                    Harga Produk 
+                                    <input type="number" className="form-control mb-2"
+                                    value={this.state.harga}
+                                    onChange={ev => this.setState({harga: ev.target.value})}
+                                    required />
+
+                                    Jumlah Produk 
+                                    <input type="number" className="form-control mb-2"
+                                    value={this.state.jumlah}
+                                    onChange={ev => this.setState({jumlah: ev.target.value})}
+                                    required />
+
+                                    Gambar Produk 
+                                    <input type="url" className="form-control mb-2"
+                                    value={this.state.gambar}
+                                    onChange={ev => this.setState({gambar: ev.target.value})}
+                                    required />
+
+                                    <button className="btn btn-info btn-block" type="submit">
+                                        Simpan
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
