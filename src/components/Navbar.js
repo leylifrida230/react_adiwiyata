@@ -16,15 +16,29 @@ class Navbar extends React.Component{
 
                 {/** Menu */}
                 <div id="menu" className="navbar-collapse collapse">
-                    <ul className="navbar=nav mr-auto">
+                    <ul className="navbar=nav mr-auto row ">
                         <li className="nav-item">
                             <Link to="/" className="nav-link">Home</Link>
                         </li>
+
                         <li className="nav-item">
                             <Link to="/gallery" className="nav-link">Gallery</Link>
                         </li>
+
                         <li className="nav-item">
                             <Link to="/calendar" className="nav-link">Calendar</Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to="/agenda" className="nav-link">Agenda</Link>
+                        </li>
+                        
+                        <li className="nav-item">
+                            <Link to="/cart" className="nav-link">Cart</Link>
+                        </li>
+
+                        <li className="nav-item">
+                            <Link to="/gagal" className="nav-link">Gagal</Link>
                         </li>
                     </ul>
                 </div>
