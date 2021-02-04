@@ -9,7 +9,7 @@ class CardProd extends React.Component{
                         {/** menampilkan gambar */}
                         <div className="col-5">
                             <img src={this.props.gambar} className="img"
-                            height="150"/>
+                            height="200"/>
                         </div>
 
                         {/* untuk menampilka deskripi */}
