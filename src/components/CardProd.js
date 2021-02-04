@@ -23,7 +23,10 @@ class CardProd extends React.Component{
                             <h6 className="text-dark">
                                 jumlah: { this.props.jumlah}
                             </h6>
-                        
+                            <h6 className="text-danger">
+                                Total: Rp.{ this.props.total}
+                            </h6>
+
                             {/* button untuk mengedit  */}
                             <button className="btn btn-sm btn-primary m-1"
                             onClick={this.props.onEdit}>

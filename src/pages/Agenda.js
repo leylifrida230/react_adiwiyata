@@ -8,13 +8,13 @@ class Agenda extends React.Component{
         this.state = {
             jadwal: [
                 {
-                    nama:"Hari Ulang tahun Dunia", tanggal:"31 February"
+                    nama:"Hari Sejuta Pohon", tanggal:"10 Janiary"
                 },
                 {
-                    nama:"hari dimana aku akan menjadi titan abnormal", tanggal:"sesaat setelah suntikan covid"
+                    nama:"Hari Peduli Sampah Nasional", tanggal:"21 February"
                 },
                 {
-                   nama:"asw di gosting anjr", tanggal:"raurus cuk karepmu"
+                   nama:"Hari Air Sedunia", tanggal:"22 Maret"
                 },
             ],
 

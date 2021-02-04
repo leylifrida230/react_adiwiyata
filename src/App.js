@@ -7,9 +7,7 @@ import Home from "./pages/Home";
 import Gallery from './pages/Gallery';
 import Calendar from './pages/Calendar';
 import Agenda from './pages/Agenda';
-import Cart from './pages/Cart' 
-import Gagal from './pages/Gagal';
-
+import Cart from './pages/Cart' ;
 class App extends React.Component{
   render(){
     return(
@@ -24,7 +22,6 @@ class App extends React.Component{
             <Route path="/Calendar" component={Calendar}/>
             <Route path="/agenda" component={Agenda}/>
             <Route path="/cart" component={Cart}/>
-            <Route path="/gagal" component={Gagal}/>
           </Switch>
         </div>
       </div>

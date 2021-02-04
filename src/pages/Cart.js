@@ -8,7 +8,7 @@ class Cart extends React.Component{
         this.state = {
             produk: [
                 {
-                    nama:"skinaqua moist milk sunscreen spf 50", harga: 45000, jumlah: 2, 
+                    nama:"skinaqua moist milk sunscreen spf 50", harga: 45000, jumlah: 2, total:90000,
                     gambar: "http://image.femaledaily.com/dyn/500/images/prod-pics/product_1564649232_Skin_Aqua__800x800.jpg"
                 }
             ],
@@ -18,6 +18,7 @@ class Cart extends React.Component{
             harga: 0,
             jumlah: 0,
             gambar: "",
+            total: 0,
             selectedItem: null,
             keyword: "",
             filterProduk: []
@@ -32,6 +33,7 @@ class Cart extends React.Component{
             harga: 0,
             jumlah: 0,
             gambar: "",
+            total:0,
             action: "insert"
         })
     }
@@ -43,6 +45,7 @@ class Cart extends React.Component{
             harga: item.harga,
             jumlah: item.jumlah,
             gambar: item.gambar,
+            total: item.total,
             action: "update",
             selectedItem: item 
         })
@@ -57,7 +60,8 @@ class Cart extends React.Component{
                 nama: this.state.nama,
                 harga: this.state.harga,
                 jumlah: this.state.jumlah,
-                gambar: this.state.gambar
+                gambar: this.state.gambar,
+                total: this.state.total
             })
         }else if(this.state.action === "update"){
             let index = tempProd.indexOf(this.state.selectedItem)
@@ -65,6 +69,7 @@ class Cart extends React.Component{
             tempProd[index].harga = this.state.harga
             tempProd[index].jumlah = this.state.jumlah
             tempProd[index].gambar = this.state.gambar
+            tempProd[index].total = this.state.total
         }
         this.setState({produk : tempProd})
 
@@ -84,6 +89,14 @@ class Cart extends React.Component{
 
     // keknya gabutuh searching deh
 
+    HitungTotal = () => {
+        let harga = this.state.harga
+        let jumlah = this.state.jumlah
+
+        let result =  harga*jumlah
+        this.setState({total: result})
+    }
+
     render(){
         return(
             // tempat total harga
@@ -95,6 +108,7 @@ class Cart extends React.Component{
                         harga={item.harga}
                         jumlah={item.jumlah}
                         gambar={item.gambar}
+                        total={item.total}
                         onEdit={ () => this.Edit(item)}
                         onDrop={ () => this.Drop(item)}
                         />
@@ -131,6 +145,12 @@ class Cart extends React.Component{
                                     <input type="number" className="form-control mb-2"
                                     value={this.state.jumlah}
                                     onChange={ev => this.setState({jumlah: ev.target.value})}
+                                    required />
+
+                                    Total Harga 
+                                    <input type="number" className="form-control mb-2"
+                                    value={this.state.total}
+                                    onChange={ev => this.setState({total: ev.target.value})}
                                     required />
 
                                     Gambar Produk 
