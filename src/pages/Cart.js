@@ -33,7 +33,8 @@ class Cart extends React.Component{
             total: 0,
             selectedItem: null,
             keyword: "",
-            filterProduk: []
+            filterProduk: [],
+            totalharga: 0
         }
         this.state.filterProduk = this.state.produk
     }
@@ -101,18 +102,24 @@ class Cart extends React.Component{
 
     // keknya gabutuh searching deh
 
-    HitungTotal = () => {
+    TotalHarga = () => {
+        // kalkulasi total harga
         let harga = this.state.harga
         let jumlah = this.state.jumlah
+        let totalharga = this.state.totalharga
 
-        let result =  harga*jumlah
-        this.setState({total: result})
+        let result = totalharga*(harga * jumlah)
+
+        this.setState({totalharga: result})
     }
+
 
     render(){
         return(
-            // tempat total harga
+            // tempatnya search tapi kenya gausa
             <div className="container">
+                <hr/>
+                <h4 className="text-danger">Total Harga: Rp. {this.state.totalharga}</h4>
                 <div className="row">
                     {this.state.filterProduk.map( (item, index) => (
                         <CardProd
@@ -121,6 +128,7 @@ class Cart extends React.Component{
                         jumlah={item.jumlah}
                         gambar={item.gambar}
                         total={item.total}
+                        totalharga={item.totalharga}
                         onEdit={ () => this.Edit(item)}
                         onDrop={ () => this.Drop(item)}
                         />
@@ -157,12 +165,6 @@ class Cart extends React.Component{
                                     <input type="number" className="form-control mb-2"
                                     value={this.state.jumlah}
                                     onChange={ev => this.setState({jumlah: ev.target.value})}
-                                    required />
-
-                                    Total Harga 
-                                    <input type="number" className="form-control mb-2"
-                                    value={this.state.total}
-                                    onChange={ev => this.setState({total: ev.target.value})}
                                     required />
 
                                     Gambar Produk 

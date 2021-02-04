@@ -24,7 +24,7 @@ class CardProd extends React.Component{
                                 jumlah: { this.props.jumlah}
                             </h6>
                             <h6 className="text-danger">
-                                Total: Rp.{ this.props.total}
+                                Total: Rp.{ this.props.harga * this.props.jumlah}
                             </h6>
 
                             {/* button untuk mengedit  */}
