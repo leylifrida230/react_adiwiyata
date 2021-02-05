@@ -36,6 +36,9 @@ class Cart extends React.Component{
             filterProduk: [],
             totalharga: 0
         }
+        this.state.produk.map((v)=>{
+            this.state.totalharga+=v.total
+        })
         this.state.filterProduk = this.state.produk
     }
 
@@ -101,18 +104,6 @@ class Cart extends React.Component{
     }
 
     // keknya gabutuh searching deh
-
-    TotalHarga = () => {
-        // kalkulasi total harga
-        let harga = this.state.harga
-        let jumlah = this.state.jumlah
-        let totalharga = this.state.totalharga
-
-        let result = totalharga*(harga * jumlah)
-
-        this.setState({totalharga: result})
-    }
-
 
     render(){
         return(
